@@ -1,77 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <style>
+    img{
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+  <body>
+    <header role="banner">
+      <div class="header-left">
+        <button
+          class="icon-button"
+          aria-label="Menu"
+          aria-controls="navigation"
+        >
+          ☰
+        </button>
+        <div class="logo">Gemini <span><img src="./mk-gif.gif" alt=""></span></div>
+      </div>
+      <button
+        class="icon-button"
+        aria-label="Notifications"
+        aria-controls="notifications"
+      >
+        🔔
+      </button>
+    </header>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MKv</title>
-    <style>
-        h1 {
-            background-color: rgb(0, 0, 0);
-            text-align: center;
-            text-shadow: 1;
-            color: gray;
-            border-radius: 30px;
-        }
-
-        #dept {
-            box-shadow: 10px 5px 5px rgb(182, 161, 161);
-        }
-
-        img {
-            height: 50px;
-            width: 70px;
-        }
-
-        form {
-            height: 200px;
-            width: 400px;
-            border-radius: 20px;
-            border: solid black;
-            box-shadow: 5px 2px 2px rgb(182, 161, 161);
-            margin-left: 10px;
-            margin-top: 20px;
-            padding: 10px;
-        }
-    </style>
-</head>
-
-<body>
-    <h1>SCSIT</h1>
-    <div>
-        <h2 id="dept" type="x"><img src="C:\Users\Lenovo\Pictures\Mk\MK_logo_Motion.gif" alt=""> Computer Science</h2>
-        <dl>
-            <dt>Courses</dt>
-            <dd>MCA</dd>
-            <dd>BCA</dd>
-            <dd>M.Tech</dd>
-
-            <table>
-                <th>
-                <td>Students</td>
-                </th>
-                <tr>
-                    <td>Manoj Kumawat</td>
-                </tr>
-                <tr>
-                    <td>Ashmeet Singh</td>
-                </tr>
-                <tr></tr>
-            </table>
-        </dl>
-
-        <a href="#form">Login</a>
-        <form action="#">
-            <input type="text" placeholder="Enter username" required>
-            <br>
-            <input type="password" placeholder="Enter password" required>
-            <br>
-            <input type="submit">
-        </form>
+    <div class="banner">
+      <div>
+        
+        <a href="#" class="banner-link">See update</a>
+      </div>
+      <button class="icon-button" aria-label="Close banner">✕</button>
     </div>
-    <span style="background-color:rgb(155, 155, 176);">Manoj</span>
 
-    <iframe src="file:///C:/Learning/PG%20@SCSIT/@LAB/SQL/DBMS_Practical.pdf" frameborder="0"></iframe>
-</body>
+    <main>
+      <div class="container">
+        <div class="welcome">
+          <h1>
+            <span class="hello">Hello</span>
+            <span class="name"></span>
+          </h1>
+          <p>How can I help you today?</p>
+        </div>
 
+        <div id="chat-display" class="chat-display"></div>
+
+        <div class="input-container">
+          <input
+            type="text"
+            id="user-input"
+            class="chat-input"
+            placeholder="Enter a prompt here"
+            aria-label="Chat input"
+          />
+          <div class="input-actions">
+            <button id="send-button" class="icon-button" aria-label="Send">
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
 </html>

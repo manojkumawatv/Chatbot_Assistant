@@ -5,12 +5,20 @@ const chatDisplay = document.getElementById("chat-display");
 const userInput = document.getElementById("user-input");
 const sendButton = document.getElementById("send-button");
 
+const themeToggle = document.getElementById("theme-toggle");
+
+themeToggle.addEventListener("click", () => {
+    const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+    document.documentElement.setAttribute("data-theme", isDark ? "light" : "dark");
+    themeToggle.textContent = isDark ? "💡" : "🌚";
+});
+
 async function fetchGroqData(messages) {
   try {
     const response = await fetch(API_URL, {
       method: "POST",
       headers: {
-        Authorization: `Bearer ${API_KEY}`, // ✅ Fixed template literal
+        Authorization: `Bearer ${API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -21,7 +29,7 @@ async function fetchGroqData(messages) {
 
     if (!response.ok) {
       const errorBody = await response.text();
-      throw new Error(`HTTP error! status: ${response.status}, body: ${errorBody}`); // ✅ Fixed template literal
+      throw new Error(`HTTP error! status: ${response.status}, body: ${errorBody}`);
     }
 
     const data = await response.json();
@@ -68,4 +76,4 @@ userInput.addEventListener("keypress", (event) => {
   }
 });
 
-chatDisplay.innerHTML = ""; // ✅ Clears chat display at the start
+chatDisplay.innerHTML = ""; //Clears chat display at the start

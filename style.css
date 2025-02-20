@@ -1,12 +1,22 @@
 :root {
-    --background: #0a0a0a;
-    --foreground: #fafafa;
-    --muted: rgba(255, 255, 255, 0.1);
-    --muted-foreground: #a1a1aa;
-    --primary: #6366f1;
-    --border: #27272a;
-    --card: #18181b;
-  }
+  --background: #ffffff;
+  --foreground: #0a0a0a;
+  --muted: rgba(0, 0, 0, 0.1);
+  --muted-foreground: #4b5563;
+  --primary: #6366f1;
+  --border: #d1d5db;
+  --card: #f3f4f6;
+}
+
+[data-theme="dark"] {
+  --background: #0a0a0a;
+  --foreground: #fafafa;
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: #a1a1aa;
+  --border: #27272a;
+  --card: #18181b;
+}
+
   
   * {
     margin: 0;
@@ -65,7 +75,8 @@
   
   main {
     flex: 1;
-    padding: 1.5rem;
+    padding: 1.0rem;
+    padding-top: 0;
     overflow: auto;
   }
   
@@ -80,7 +91,7 @@
   }
   
   .welcome h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
   
@@ -105,6 +116,7 @@
   
   .chat-display {
     display: flex;
+    height: 300px;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
@@ -188,7 +200,7 @@
   
   @media (max-width: 640px) {
     .welcome h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
   
     .welcome p {

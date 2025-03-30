@@ -1,5 +1,8 @@
 # Simple Chatbot
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a1b39bf7968a4446a2a8d7ac0e584397)](https://app.codacy.com/gh/manojkumawatv/SvvvChatbot?utm_source=github.com&utm_medium=referral&utm_content=manojkumawatv/SvvvChatbot&utm_campaign=Badge_Grade)
+
+
 A simple chatbot built using **HTML, CSS, and JavaScript**, which fetches responses from **Groq Cloud API** using an API key.
 
 ## 🌐 Live Demo

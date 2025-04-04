@@ -1,4 +1,4 @@
-const API_KEY = "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";
+const API_KEY = "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";
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 const chatDisplay = document.getElementById("chat-display");
@@ -22,7 +22,7 @@ async function fetchGroqData(messages) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "mixtral-8x7b-32768",
+        model: "llama-3.3-70b-versatile",
         messages: messages,
       }),
     });
@@ -56,8 +56,11 @@ async function handleUserInput() {
 
     try {
       const messages = [
-        { role: "system", content: "You are a helpful assistant." },
-        { role: "user", content: userMessage },
+        {
+          role: "system",
+          content: "You are technical support expert named ManoAI as you are developed by 'Manoj'. Your task is to assist people in a procedural way."
+        },
+        { role: "user", content: userMessage }
       ];
 
       const botResponse = await fetchGroqData(messages);

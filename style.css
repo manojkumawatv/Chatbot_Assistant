@@ -156,7 +156,10 @@
   .input-container {
     max-width: 64rem;
     margin: 0 auto;
-    position: relative;
+    position: fixed; bottom: 0; width: 100%; 
+    background: #fff; z-index: 100; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
+    padding: 12px 0;
   }
   
   .chat-input {

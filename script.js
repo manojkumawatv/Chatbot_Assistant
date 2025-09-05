@@ -1,4 +1,4 @@
-const API_KEY = process.env.Groq_API_KEY;
+const API_KEY = process.env.GROQ_API_KEY;
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 const chatDisplay = document.getElementById("chat-display");

@@ -3,7 +3,7 @@
 A simple chatbot built using **HTML, CSS, and JavaScript**, which fetches responses from **Groq Cloud API** using an API key.
 
 ## 🌐 Live Demo
-Check out the deployed version: [Live Chatbot](https://svvv-chatbot.vercel.app/)
+Check out the deployed version: [Live Chatbot](http://chatbotmkv.vercel.app)
 
 ## 🚀 Features
 - Interactive chatbot interface

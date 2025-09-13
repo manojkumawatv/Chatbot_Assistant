@@ -1,4 +1,3 @@
-const API_KEY = process.env.GROQ_API_KEY;
 const API_URL = "https://api.groq.com/openai/v1/chat/completions";
 
 const chatDisplay = document.getElementById("chat-display");
@@ -16,11 +15,11 @@ themeToggle.addEventListener("click", () => {
 async function fetchGroqData(messages) {
   try {
     const response = await fetch(API_URL, {
-      method: "POST",
+      method: `POST`,
       headers: {
-        Authorization: `Bearer ${API_KEY}`,
-        "Content-Type": "application/json",
-      },
+      'Authorization': `Bearer ${process.env.GROQ_API_KEY}`,
+      'Content-Type': 'application/json',
+    },
       body: JSON.stringify({
         model: "llama-3.3-70b-versatile",
         messages: messages,

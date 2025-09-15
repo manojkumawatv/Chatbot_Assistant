@@ -12,7 +12,7 @@ themeToggle.addEventListener("click", () => {
 
 async function fetchGroqData(messages) {
   try {
-    const response = await fetch('/api/chat', {
+    const response = await fetch('api\chat.js', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

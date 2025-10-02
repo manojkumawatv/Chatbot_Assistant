@@ -1,6 +1,3 @@
-const API_KEY = process.env.GROQ_API_KEY;
-const API_URL = "https://api.groq.com/openai/v1/chat/completions";
-
 const chatDisplay = document.getElementById("chat-display");
 const userInput = document.getElementById("user-input");
 const sendButton = document.getElementById("send-button");
@@ -15,14 +12,12 @@ themeToggle.addEventListener("click", () => {
 
 async function fetchGroqData(messages) {
   try {
-    const response = await fetch(API_URL, {
-      method: "POST",
+    const response = await fetch('/api/chat', {
+      method: 'POST',
       headers: {
-        Authorization: `Bearer ${API_KEY}`,
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: "llama-3.3-70b-versatile",
         messages: messages,
       }),
     });
@@ -33,7 +28,7 @@ async function fetchGroqData(messages) {
     }
 
     const data = await response.json();
-    return data.choices[0].message.content;
+    return data.content;
   } catch (error) {
     console.error("Error fetching data:", error);
     throw new Error("Sorry, I encountered an error. Please try again later.");
